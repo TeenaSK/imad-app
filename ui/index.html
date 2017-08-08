@@ -1,20 +1,9 @@
-<!doctype html>
-<html>
-    <head>
-        <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="center">
-            <img src="/ui/madi.png" class="img-medium"/>
-        </div>
-        <br>
-        <div id="main-text" class="center text-big bold">
-            Hi! I am Teena. This is my webapp. <p>I could change file locally.</p>
-        </div>
-        <script>
-            alert("hi welcome!");
-        </script>
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
-    </body>
-</html>
+console.log('Loaded!');
+
+var element= document.getElementById("main-text");
+element.innerHTML="new Value";
+
+var img= document.getElementById("madi");
+img.onclick = function(){
+    img.style.marginLeft = '100px';
+};
