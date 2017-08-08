@@ -16,7 +16,7 @@ app.use(morgan('combined'));
             <p>
                 Content of first article. Content of first article. Content of first article. Content of first article. Content of first article. Content of first article. Content of first article.
             </p>`
-    };*/
+    };
 var articles = {
     'article-one': {
         title:'Article-One',
@@ -75,7 +75,7 @@ function createTemplate(data){
     </html>
     `;
     return htmlTemplate;
-}
+}*/
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
