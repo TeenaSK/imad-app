@@ -17,6 +17,7 @@ button.onclick = function(){
     }
     
     request.open('GET','http://teenakanil.imad.hasura-app.io/counter',true);
+    request.send(null);
 };
 
 /*var element= document.getElementById("main-text");
