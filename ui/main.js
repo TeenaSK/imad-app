@@ -1,6 +1,14 @@
 console.log('Loaded!');
 
-var element= document.getElementById("main-text");
+var button= document.getElementById("counter");
+var counter = 0;
+button.onclick = function(){
+    var span= document.getElementById("count");
+    counter = counter + 1;
+    span.innerHTML = counter.toString();
+};
+
+/*var element= document.getElementById("main-text");
 element.innerHTML="new Value";
 
 var img= document.getElementById("madi");
@@ -11,4 +19,4 @@ function moveRight(){
 }
 img.onclick = function(){
     var interval = setInterval(moveRight,50);
-};
+};*/
