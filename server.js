@@ -99,9 +99,22 @@ app.get('/test-db', function (req, res) {
   })
 });
 
-/*app.get('/:articleName', function (req, res) {
-    var articleName = req.params.articleName;
-    res.send(createTemplate(articles[articleName]));
+/*app.get('/articles/:articleName', function (req, res) {
+    //var articleName = req.params.articleName;
+    pool.query("SELECT * from article where title='"+req.params.articleName+"'",function(err,result){
+      if(err){
+          res.status(500).send(err.toString());
+      }else{
+            if(result.rows.length === 0){
+                res.status(404).send('Article not found');
+            }
+            else{
+                var articleData = result.rows[0];
+                res.send(createTemplate(articleData));
+            }
+      }
+  }));
+    
 });
 
 app.get('/article-one', function (req, res) {
