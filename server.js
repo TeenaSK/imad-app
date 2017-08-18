@@ -46,7 +46,7 @@ var articles = {
                 Content of second article. Content of second article. Content of second article. Content of second article. Content of second article. Content of second article. Content of second article.
             </p>`
     }
-};
+};*/
 function createTemplate(data){
     var title = data.title;
     var heading = data.heading;
@@ -82,7 +82,7 @@ function createTemplate(data){
     </html>
     `;
     return htmlTemplate;
-}*/
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
