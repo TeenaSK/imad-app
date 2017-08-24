@@ -151,6 +151,11 @@ app.get('/check-login', function (req, res) {
         res.send('U are not logged in ');
     }
 });
+app.get('/logout', function (req, res) {
+    delete req.session.auth;
+    res.send('logged out');
+}
+
 
 var pool = new Pool(config);
 app.get('/test-db', function (req, res) {
